@@ -2,7 +2,6 @@
 const { useEffect } = React;
 const tfsaEl = wp.element.createElement;
 const __ = wp.i18n.__;
-const { Tooltip } = wp.components;
 const { InspectorControls, RichText, } = wp.blockEditor;
 const { useState } = wp.element;
 

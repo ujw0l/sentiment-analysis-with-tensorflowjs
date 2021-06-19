@@ -1,7 +1,7 @@
 <?php 
 /*
  Plugin Name:Sentiment Analysis with Tensorflowjs
- Plugin URI:
+ Plugin URI: https://github.com/ujw0l/sentiment-analysis-with-tensorflowjs
  Description: Sentiment analysis with Tensorflow.js gutenberg block
  Version: 1.0.0
  Author: Ujwol Bastakoti
