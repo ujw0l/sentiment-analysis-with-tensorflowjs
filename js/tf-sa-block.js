@@ -114,7 +114,7 @@ wp.blocks.registerBlockType('tf-sa/tf-sentiment-analysis',
 
                 let trimmedText = attributes.text.trim().toLowerCase().replace(/(\.|\,|\!|\?)/g, "").split(' ');
 
-                setAttributes({ textLength: trimmedText.length })
+                setAttributes({ textLength: trimmedText.filter(z => ' ' != z).length })
                 let score = run(trimmedText);
 
                 score.then((sc) => {
