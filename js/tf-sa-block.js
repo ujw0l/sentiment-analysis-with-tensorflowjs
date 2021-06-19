@@ -2,8 +2,8 @@
 const { useEffect } = React;
 const tfsaEl = wp.element.createElement;
 const __ = wp.i18n.__;
-const { InspectorControls, RichText, } = wp.blockEditor;
-const { useState } = wp.element;
+const { RichText, } = wp.blockEditor;
+
 
 /**
  * @since 1.0.0 
