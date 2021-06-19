@@ -57,14 +57,17 @@ const padSequences = (sequence, metadata) => {
 
 const predictScore = (trimmedText, model, metaData) => {
     const sequence = trimmedText.map(x => {
-        let wordIndex = metaData.word_index[x];
-        if ('undefined' === typeof wordIndex) {
-            return 2; //oov_index
-        }
-        return wordIndex + metaData.index_from;
-    })
 
-    const paddedSequence = padSequences(sequence, metaData);
+        if (' ' != x) {
+            let wordIndex = metaData.word_index[x];
+            if ('undefined' === typeof wordIndex) {
+                return 2; //oov_index
+            }
+            return wordIndex + metaData.index_from;
+        }
+    })
+    let seq = sequence.filter(y => y);
+    const paddedSequence = padSequences(seq, metaData);
     const input = tf.tensor2d(paddedSequence, [1, metaData.max_len]);
     const predictOut = model.predict(input);
     const score = predictOut.dataSync()[0];
@@ -141,7 +144,5 @@ wp.blocks.registerBlockType('tf-sa/tf-sentiment-analysis',
                 ),
             )
         },
-        save: ({ attributes }) => { return tfsaEl('p', {}, attributes.text) },
-
-
+        save: ({ attributes }) => tfsaEl('p', {}, attributes.text.replace(/\s/g, '&nbsp;')),
     });
