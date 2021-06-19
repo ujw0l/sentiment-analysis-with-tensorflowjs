@@ -136,7 +136,7 @@ wp.blocks.registerBlockType('tf-sa/tf-sentiment-analysis',
 
             return tfsaEl('div', null,
                 tfsaEl(RichText, { tag: 'p', allowedFormats: [], onChange: val => setAttributes({ text: val }), value: attributes.text, placeholder: __('Type text', 'tf-sa') }),
-                tfsaEl('div', { style: { width: '100%', backgroundColor: 'rgba(255,255,255,1)', height: '175px', padding: '10px' } },
+                tfsaEl('div', { style: { marginTop: '10px', width: '100%', backgroundColor: 'rgba(255,255,255,1)', height: '175px', padding: '10px' } },
                     tfsaEl('span', { className: 'dashicons-before dashicons-lightbulb' }, __('Sentiment Analysis', 'tf-sa')),
                     tfsaEl('span', { className: 'dashicons dashicons-lightbulb', style: { height: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', fontSize: '50px', color: attributes.color } }, ''),
                     tfsaEl('div', {}, tfsaEl('span', {}, __('Sentiment : ', 'tfsa')), tfsaEl('span', { style: { color: attributes.color } }, attributes.sentiment)),
