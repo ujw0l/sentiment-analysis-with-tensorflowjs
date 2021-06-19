@@ -26,6 +26,9 @@ const loadMetadata = async () => {
 const loadModel = async () => await tf.loadLayersModel('https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/model.json');
 
 /**
+ * @since 1.0.0
+ * 
+ * Pad the word sequence to be predicted
  * 
  * @param {*} sequence  Text sequence in array
  * @param {*} metadata  Metadata for 
@@ -49,6 +52,9 @@ const padSequences = (sequence, metadata) => {
 }
 
 /**
+ * @since 1.0.0
+ * 
+ * Predict score
  * 
  * @param {*} text Sentiment Analysis text
  * @param {*} model Tf model
