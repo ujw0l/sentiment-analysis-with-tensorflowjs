@@ -59,6 +59,8 @@ const padSequences = (sequence, metadata) => {
  * @param {*} text Sentiment Analysis text
  * @param {*} model Tf model
  * @param {*} metaData Tf metadata
+ * 
+ * @returns score Sentiment score
  */
 
 const predictScore = (trimmedText, model, metaData) => {
