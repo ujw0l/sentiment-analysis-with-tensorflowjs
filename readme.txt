@@ -29,7 +29,7 @@ e.g.
 
 = Why can't I write more than 100 words ? =
 
-The model I am using (the only one I can find) for machine learning can only analyse 100 words at a time, if they develop other model I will update it in future.
+The model I am using (the only one I can find) for machine learning can only analyse 100 words at a time, if they develop other model I will update it in future. For now you can use multiple block with each paragraph less than 100 words.
 
 == Screenshots ==
 1. Gutenberg Block
