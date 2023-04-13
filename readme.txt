@@ -2,7 +2,7 @@
 Contributors: UjW0L
 Tags: block, sentiment-analysis, machine-learning
 Requires at least: 5.7.2
-Tested up to: 5.7.2
+Tested up to: 6.1.0
 Requires PHP: 7.4.9
 Stable tag: 1.0.0
 License: GPL V2
