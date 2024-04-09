@@ -12,9 +12,17 @@ Guternberg block to detect sentiment of the paragraph as you write using Tensorf
 == Description ==
 Plugins lets you write the paragraph on block editor and anlyses the sentiment of the paragraph as you write it.
 
+
+= Integrations =
+* Plugin uses third party model from https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/model.json
+* Plugin uses third party metadata from https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/metadata.json
+
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
+
+
 
 e.g.
 
