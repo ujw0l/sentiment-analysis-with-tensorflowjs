@@ -164,6 +164,7 @@ useEffect(() => {
 	});
 }else{
 	setAttributes({ textLength: 0});
+	setAttributes({ color: 'rgba(247, 202, 24, 1)' });
 }
 
 }, [attributes.text]);
@@ -200,9 +201,6 @@ useEffect(() => {
 				<span>{ __('Sentiment : ', 'tf-sa')}</span>
 				<span style={{ color: attributes.color }}>{attributes.sentiment}</span>
 			</div>
-			
-			
-		
 			</CardFooter>
 			</Card>
 		</div>
