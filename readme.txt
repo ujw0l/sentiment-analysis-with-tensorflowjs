@@ -2,7 +2,7 @@
 Contributors: UjW0L
 Tags: block, sentiment-analysis, machine-learning
 Requires at least: 5.7.2
-Tested up to: 6.2.2
+Tested up to: 6.5.0
 Requires PHP: 7.4.9
 Stable tag: 1.1.0
 License: GPL V2
@@ -12,11 +12,15 @@ Guternberg block to detect sentiment of the paragraph as you write using Tensorf
 == Description ==
 Plugins lets you write the paragraph on block editor and anlyses the sentiment of the paragraph as you write it.
 
+
+= Integrations =
+* Plugin uses third party model from https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/model.json
+* Plugin uses third party metadata from https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/metadata.json
+
+
 == Installation ==
 
 This section describes how to install the plugin and get it working.
-
-e.g.
 
 1. Upload the plugin files to the `/wp-content/plugins/sentiment-analysis-with-tensorflowjs` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress

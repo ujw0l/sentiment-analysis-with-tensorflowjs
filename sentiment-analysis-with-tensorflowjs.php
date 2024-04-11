@@ -16,6 +16,9 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
+
+ if ( ! defined( 'ABSPATH' ) ) exit; 
+
 function create_block_sentiment_analysis_with_tensorflowjs_block_init() {
 
 	register_block_type( __DIR__ . '/build');

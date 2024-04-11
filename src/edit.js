@@ -1,5 +1,10 @@
 import * as tf from '@tensorflow/tfjs';
 import {useEffect} from 'react';
+import { 
+	Card,
+    CardHeader,
+    CardBody,
+    CardFooter,} from '@wordpress/components';
 
 
 /**
@@ -138,6 +143,7 @@ const run = async (text) => {
 
 useEffect(() => {
 
+	if(attributes.text.length>0){
 	let trimmedText = attributes.text.trim().toLowerCase().replace(/(\.|\,|\!|\?)/g, "").split(' ');
 
 	setAttributes({ textLength: trimmedText.filter(z => ' ' != z).length })
@@ -156,6 +162,10 @@ useEffect(() => {
 			setAttributes({ color: 'rgba(255, 0, 0,1)' });
 		}
 	});
+}else{
+	setAttributes({ textLength: 0});
+	setAttributes({ color: 'rgba(247, 202, 24, 1)' });
+}
 
 }, [attributes.text]);
 
@@ -170,22 +180,29 @@ useEffect(() => {
 			value={attributes.text}
 			placeholder={__("Type paragraph",'tf-sa')}			
 			/>
-
-			<div style={{ marginTop: '10px', width: '100%', backgroundColor: 'rgba(255,255,255,1)', height: '175px', padding: '10px' } }>
+           <Card>
+		   <CardHeader>
+			<div style={{ width: '100%', backgroundColor: 'rgba(255,255,255,1)', height: '20px', padding: '10px' } }>
 				<span className='dashicons-before dashicons-lightbulb'>{__('Sentiment Analysis', 'tf-sa')}</span>
-				<span className= 'dashicons dashicons-lightbulb' style={{ height: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', fontSize: '50px', color: attributes.color }} ></span>
+
 			</div>
+			</CardHeader>
+			<CardBody>
+			<span className= 'dashicons dashicons-lightbulb' style={{ height: '50px', marginLeft: 'auto', marginRight: 'auto', display: 'block', fontSize: '50px', color: attributes.color }} ></span>
+			<div style={{display:'block'}}>
+				<span>{ __('Word Count: ', 'tf-sa')}</span>
+				<span> {attributes.textLength} </span>
+				<span style={{ fontSize: '10px' }}><i>{__('(Keep word count to less than 100.)','tf-sa')}</i></span>
+			</div>
+			</CardBody>
+			<CardFooter>
 			<div style={{padding:"25px"}}>
-				<div>
+				
 				<span>{ __('Sentiment : ', 'tf-sa')}</span>
 				<span style={{ color: attributes.color }}>{attributes.sentiment}</span>
 			</div>
-			<div>
-				<span>{ __('Word Count: ', 'tf-sa')}</span>
-				<span> {attributes.textLength} </span>
-				<span styles={{ fontSize: '10px' } }>{__('Keep word count to less than 100.','tf-sa')}</span>
-			</div>
-			</div>
+			</CardFooter>
+			</Card>
 		</div>
 	);
 }
