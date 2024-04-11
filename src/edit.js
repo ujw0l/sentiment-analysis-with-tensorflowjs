@@ -181,7 +181,7 @@ useEffect(() => {
 			/>
            <Card>
 		   <CardHeader>
-			<div style={{ marginTop: '10px', width: '100%', backgroundColor: 'rgba(255,255,255,1)', height: '30px', padding: '10px' } }>
+			<div style={{ width: '100%', backgroundColor: 'rgba(255,255,255,1)', height: '20px', padding: '10px' } }>
 				<span className='dashicons-before dashicons-lightbulb'>{__('Sentiment Analysis', 'tf-sa')}</span>
 
 			</div>
