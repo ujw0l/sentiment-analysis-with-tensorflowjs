@@ -143,6 +143,7 @@ const run = async (text) => {
 
 useEffect(() => {
 
+	if(attributes.text.length>0){
 	let trimmedText = attributes.text.trim().toLowerCase().replace(/(\.|\,|\!|\?)/g, "").split(' ');
 
 	setAttributes({ textLength: trimmedText.filter(z => ' ' != z).length })
@@ -161,6 +162,9 @@ useEffect(() => {
 			setAttributes({ color: 'rgba(255, 0, 0,1)' });
 		}
 	});
+}else{
+	setAttributes({ textLength: 0});
+}
 
 }, [attributes.text]);
 
@@ -187,7 +191,7 @@ useEffect(() => {
 			<div style={{display:'block'}}>
 				<span>{ __('Word Count: ', 'tf-sa')}</span>
 				<span> {attributes.textLength} </span>
-				<span styles={{ fontSize: '10px' } }>{__('Keep word count to less than 100.','tf-sa')}</span>
+				<span style={{ fontSize: '10px' }}><i>{__('(Keep word count to less than 100.)','tf-sa')}</i></span>
 			</div>
 			</CardBody>
 			<CardFooter>
