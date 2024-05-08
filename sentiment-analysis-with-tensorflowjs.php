@@ -7,7 +7,7 @@
  Author: Ujwol Bastakoti
  Author URI:https://ujw0l.github.io/
  Text Domain:  tf-sa
- License: GPLv2
+ License: GPL V2
 */
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -19,8 +19,8 @@
 
  if ( ! defined( 'ABSPATH' ) ) exit; 
 
-function create_block_sentiment_analysis_with_tensorflowjs_block_init() {
+function tfsa_create_block_sentiment_analysis_with_tensorflowjs_block_init() {
 
 	register_block_type( __DIR__ . '/build');
 }
-add_action( 'init', 'create_block_sentiment_analysis_with_tensorflowjs_block_init' );
+add_action( 'init', 'tfsa_create_block_sentiment_analysis_with_tensorflowjs_block_init' );

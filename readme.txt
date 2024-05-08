@@ -14,6 +14,7 @@ Plugins lets you write the paragraph on block editor and anlyses the sentiment o
 
 
 = Integrations =
+Only model and metadata are loaded from following services (no data will be sent to them) 
 * Plugin uses third party model from https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/model.json
 * Plugin uses third party metadata from https://storage.googleapis.com/tfjs-models/tfjs/sentiment_cnn_v1/metadata.json
 
