@@ -2,9 +2,9 @@
 Contributors: UjW0L
 Tags: block, sentiment-analysis, machine-learning
 Requires at least: 5.7.2
-Tested up to: 6.5.0
+Tested up to: 6.5
 Requires PHP: 7.4.9
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPL V2
 
 Guternberg block to detect sentiment of the paragraph as you write using Tensorflowjs
@@ -46,4 +46,7 @@ The model I am using (the only one I can find) for machine learning can only ana
 
 =1.1.0=
 *JSX Support 
-*Doesn't use scripts from expternal sites
+*Doesn't use scripts from expternal sites.
+
+=1.2.0=
+*Now displays sentiment score.

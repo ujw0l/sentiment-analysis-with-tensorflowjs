@@ -151,6 +151,8 @@ useEffect(() => {
 
 	score.then((sc) => {
 		let score = parseFloat(sc, 10);
+
+	setAttributes({sentScore:score});
 		if (score > 0.66) {
 			setAttributes({ sentiment: __('Positive', 'tf-sa') });
 			setAttributes({ color: 'rgba(60, 179, 113,1)' });
@@ -164,7 +166,9 @@ useEffect(() => {
 	});
 }else{
 	setAttributes({ textLength: 0});
+	setAttributes({sentScore:0});
 	setAttributes({ color: 'rgba(247, 202, 24, 1)' });
+	setAttributes({ sentiment: __('Neutral', 'tf-sa') });
 }
 
 }, [attributes.text]);
@@ -196,6 +200,15 @@ useEffect(() => {
 			</div>
 			</CardBody>
 			<CardFooter>
+
+			<div style={{padding:"25px"}}>
+				
+				<span>{ __('Score  : ', 'tf-sa')}</span>
+				<span style={{ color: attributes.color }}>{parseFloat(attributes.sentScore).toFixed(2)*100}</span>
+				<br/>
+				<i style={{ fontSize: '10px' }}>{__('Score from 1 to 100.','tf-sa')}</i>
+			</div>
+
 			<div style={{padding:"25px"}}>
 				
 				<span>{ __('Sentiment : ', 'tf-sa')}</span>
