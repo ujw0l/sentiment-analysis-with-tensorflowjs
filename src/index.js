@@ -45,6 +45,7 @@ registerBlockType( metadata.name, {
 		color: { type: 'String', default: '' },
 		sentiment: { type: 'string', default: '' },
 		textLength: { type: 'Number', default: 0 },
+		sentScore :{ type :'Number', default:0}
 	},
 	/**
 	 * @see ./edit.js
