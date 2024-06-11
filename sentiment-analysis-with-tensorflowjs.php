@@ -3,7 +3,7 @@
  Plugin Name:Sentiment Analysis with Tensorflowjs
  Plugin URI: https://github.com/ujw0l/sentiment-analysis-with-tensorflowjs
  Description: Sentiment analysis with Tensorflow.js gutenberg block
- Version: 1.1.0
+ Version: 1.2.0
  Author: Ujwol Bastakoti
  Author URI:https://ujw0l.github.io/
  Text Domain:  tf-sa
